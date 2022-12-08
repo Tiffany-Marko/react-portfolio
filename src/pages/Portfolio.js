@@ -1,5 +1,10 @@
 import React from "react"
 import plannerImage from "../assets/PlannerApp.png"
+import weatherImage from "../assets/weather.png"
+import quizImage from "../assets/quiz.png"
+import refactImage from "../assets/refact.png"
+import jateImage from "../assets/jate.png"
+import portImage from "../assets/port.png"
 import Project from "../components/Project"
 function Portfolio(){
     const projects = [
@@ -14,7 +19,7 @@ function Portfolio(){
         {
             name:"Weather Project",
             github:"https://github.com/Tiffany-Marko/Weather-Project",
-            image:"PlannerApp.png",
+            image: weatherImage,
             link:"https://tiffany-marko.github.io/Weather-Project/",
             description:"Weather Forecast",
 
@@ -22,7 +27,7 @@ function Portfolio(){
         {
             name:"Quiz Game",
             github:"https://github.com/Tiffany-Marko/Quiz-Game",
-            image:"PlannerApp.png",
+            image: quizImage,
             link:"https://tiffany-marko.github.io/Quiz-Game/",
             description:"Dragon Quiz Game",
 
@@ -30,7 +35,7 @@ function Portfolio(){
         {
             name:"Refactor Project",
             github:"https://github.com/Tiffany-Marko/code-refactor",
-            image:"PlannerApp.png",
+            image: refactImage,
             link:"https://tiffany-marko.github.io/code-refactor/",
             description:"Code Refactor Project",
 
@@ -38,7 +43,7 @@ function Portfolio(){
         {
             name:"PWA",
             github:"https://github.com/Tiffany-Marko/PWA",
-            image:"PlannerApp.png",
+            image: jateImage,
             link:"https://pwa-assignment-tiff.herokuapp.com/",
             description:"PWA App",
 
@@ -46,7 +51,7 @@ function Portfolio(){
         {
             name:"Portfolio CSS",
             github:"https://github.com/Tiffany-Marko/portfoliopage",
-            image:"PlannerApp.png",
+            image:portImage,
             link:"https://tiffany-marko.github.io/portfoliopage/",
             description:"Old Portfolio",
 
