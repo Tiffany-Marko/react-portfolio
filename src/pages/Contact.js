@@ -9,6 +9,7 @@ const divStyles = {
 }
 function Contact() {
     const [formState, setFormState] = useState({ name: "", email: "", message: "" })
+    const [formErrors, setFormErrors] = useState({message:"", name: "", email: ""})
     const handleInputChange = (e) => {
         console.log(e.target.name, e.target.value)
         //    the above needs to be modified
@@ -17,6 +18,33 @@ function Contact() {
         [e.target.name]: e.target.value
         })
     };
+    const handleBlur = (e) => {
+        if (e.target.value === ""){
+            setFormErrors({
+                ...formErrors,
+                [e.target.name]:"This Field is Required"
+
+            })
+            return
+        }
+        if(e.target.name === "email"){
+            const isValid = validateEmail(e.target.value)
+            if(!isValid){
+                setFormErrors({
+                    ...formErrors,
+                    email: "email is not correctly formatted"
+                })
+            }
+        }
+    }
+    const handleFocus = (e) => {
+       
+            setFormErrors({
+                ...formErrors,
+                [e.target.name]:""
+
+            })
+    }
     return (
         <div style={divStyles}>
             <h1>Contact</h1>
@@ -29,17 +57,25 @@ function Contact() {
                         placeholder="Enter Name"
                         name="name"
                         value={formState.name}
-                        onChange={handleInputChange} />
+                        onChange={handleInputChange} 
+                        onBlur = {handleBlur}
+                        onFocus = {handleFocus}
+                        />
+                        {formErrors.name &&<Form.Text>{formErrors.name}</Form.Text>}
+
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control
+
                         type="email"
                         placeholder="Enter email"
                         name="email"
                         value={formState.email}
-                        onChange={handleInputChange} />
-
+                        onChange={handleInputChange}
+                        onBlur = {handleBlur}
+                        onFocus = {handleFocus} />
+                         {formErrors.email &&<Form.Text>{formErrors.email}</Form.Text>}
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicMessage">
                     <Form.Label>Message</Form.Label>
@@ -48,10 +84,11 @@ function Contact() {
                         placeholder="Enter message"
                         value={formState.message}
                         name="message"
-                        onChange={handleInputChange} />
+                        onChange={handleInputChange}
+                        onBlur = {handleBlur}
+                        onFocus = {handleFocus} />
+                         {formErrors.message &&<Form.Text>{formErrors.message}</Form.Text>}
                 </Form.Group>
-
-
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>

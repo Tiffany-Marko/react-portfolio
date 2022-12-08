@@ -1,17 +1,18 @@
 import React, { useState } from "react";
-import NavBar from "./Navbar";
+import Header from "./Header";
 import Home from "../pages/Home";
 import Contact from "../pages/Contact";
 import Portfolio from "../pages/Portfolio";
 import Resume from "../pages/Resume";
+import Footer from "./Footer"
 const mainStyles = {
   border: "1px solid black",
   height: "100vh",
 }
 function PortfolioContainer(){
-    const [currentPage, setCurrentPage] = useState('Home');
+    const [currentPage, setCurrentPage] = useState('About Me');
     const renderPage = () => {
-        if (currentPage === 'Home') {
+        if (currentPage === 'About Me') {
           return <Home />;
         }
         if (currentPage === 'Portfolio') {
@@ -25,8 +26,9 @@ function PortfolioContainer(){
       const handlePageChange = (page) => setCurrentPage(page);
     return (
         <main style={mainStyles}>
-            <NavBar currentPage={currentPage} handlePageChange={handlePageChange}/>
+            <Header currentPage={currentPage} handlePageChange={handlePageChange}/>
             {renderPage()}
+            <Footer />
         </main>
     )
 }

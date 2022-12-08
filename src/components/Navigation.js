@@ -5,15 +5,18 @@ import React from 'react';
 function NavBar({ currentPage, handlePageChange }) {
   return (
     <ul className="nav nav-tabs">
+      <p style = {{padding: "5px 10px", marginTop:"5px"}}>
+        Tiffany Marko
+      </p>
       <li className="nav-item">
         <a
-          href="#home"
-          onClick={() => handlePageChange('Home')}
+          href="#About-Me"
+          onClick={() => handlePageChange('About Me')}
           // This is a conditional (ternary) operator that checks to see if the current page is "Home"
           // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-          className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
+          className={currentPage === 'About Me' ? 'nav-link active' : 'nav-link'}
         >
-          Home
+          About Me
         </a>
       </li>
       <li className="nav-item">
