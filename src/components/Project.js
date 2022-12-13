@@ -2,7 +2,7 @@ import react from "react"
 
 const Project = (props)=>{
     return (
-    <div style ={{display:"flex",flexDirection:"column"}}>
+    <div style ={{display:"flex",flexDirection:"column", margin: "10px"}}>
         
             <h3>
         {props.name

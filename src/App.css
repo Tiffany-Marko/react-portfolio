@@ -8,9 +8,26 @@
 } */
 .page-container {
   display: flex;
-  justify-content: center;
+  justify-content:center;
+  background-color: rgb(164, 145, 145);
+  min-height: calc(100vh - 80px);
 }
 .page {
   width: 80%;
-  
+
+}
+.aboutContent {
+  display: flex;
+  justify-content: space-between;
+}
+.aboutBio {
+  display: flex;
+  width: 35%;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 22px;
+
+}
+.aboutImage {
+  width: 45%
 }
