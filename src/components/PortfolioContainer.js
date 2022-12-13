@@ -6,7 +6,6 @@ import Portfolio from "../pages/Portfolio";
 import Resume from "../pages/Resume";
 import Footer from "./Footer"
 const mainStyles = {
-  border: "1px solid black",
   height: "100vh",
 }
 function PortfolioContainer(){

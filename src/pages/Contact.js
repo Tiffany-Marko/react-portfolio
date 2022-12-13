@@ -3,8 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { validateEmail } from "../utils/helpers";
 const divStyles = {
-    border: "1px solid black",
-    maxWidth: "1000px",
+    maxWidth: "700px",
     margin: "10px auto",
 }
 function Contact() {
