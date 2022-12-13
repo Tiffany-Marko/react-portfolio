@@ -11,10 +11,10 @@ function Home(){
             <h1>About Me</h1>
             <img src = {process.env.PUBLIC_URL + myPic} className = "float-left" width = "150px" height = "150px" alt = "tiffany"></img>
             <p>
-            posuere pretium urna eget rhoncus. Aenean at velit eros. Morbi id consequat velit, vel vestibulum augue. Vivamus nulla dui, posuere eget dignissim ut, porttitor non ipsum. Ut pulvinar elit vulputate lorem volutpat, eu posuere sapien feugiat. Morbi eu mi sem.
+                insert bio here
             </p>
             <p>
-            posuere pretium urna eget rhoncus. Aenean at velit eros. Morbi id consequat velit, vel vestibulum augue. Vivamus nulla dui, posuere eget dignissim ut, porttitor non ipsum. Ut pulvinar elit vulputate lorem volutpat, eu posuere sapien feugiat. Morbi eu mi sem.
+             if needed here too
             </p>
             </div>
 
