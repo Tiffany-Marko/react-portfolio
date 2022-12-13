@@ -7,14 +7,14 @@ const divStyles = {
 }
 function Home(){
     return(
-        <div style={divStyles}>
+        <div className = "page" style={divStyles}>
             <h1>About Me</h1>
             <img src = {process.env.PUBLIC_URL + myPic} className = "float-left" width = "150px" height = "150px" alt = "tiffany"></img>
             <p>
-                insert bio here
+                Hello!
             </p>
             <p>
-             if needed here too
+             Hello World
             </p>
             </div>
 

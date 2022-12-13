@@ -1,7 +1,7 @@
 import React from "react"
 function Resume(){
     return(
-        <div>
+        <div className = "page">
             <h1>Resume</h1>
             <div>
                 <a href = {process.env.PUBLIC_URL + "/assets/downloads/ResumeMarko3.docx"} download = {true}>

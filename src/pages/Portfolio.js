@@ -69,7 +69,7 @@ function Portfolio(){
     })
    } 
     return(
-        <div>
+        <div className = "page">
             <h1>Portfolio</h1>
             <div className="projects">
                 {renderProjects()}

@@ -27,7 +27,9 @@ function PortfolioContainer(){
     return (
         <main style={mainStyles}>
             <Header currentPage={currentPage} handlePageChange={handlePageChange}/>
+            <div className = "page-container">
             {renderPage()}
+            </div>
             <Footer />
         </main>
     )

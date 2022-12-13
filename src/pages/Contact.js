@@ -46,7 +46,7 @@ function Contact() {
             })
     }
     return (
-        <div style={divStyles}>
+        <div className = "page" style={divStyles}>
             <h1>Contact</h1>
 
             <Form>
